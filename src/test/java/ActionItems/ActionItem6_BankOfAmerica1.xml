@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Testing">
+    <test name="Bank of America Web Automation" preserve-order="true">
+        <classes>
+            <class name="ActionItems.ActionItem6_BankOfAmerica1" />
+
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
