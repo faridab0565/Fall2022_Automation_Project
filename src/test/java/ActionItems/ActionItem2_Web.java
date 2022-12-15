@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class ActionItem2_Web {
     public static void main(String[] args) throws InterruptedException {
             ArrayList<String> hobbies = new ArrayList<>();
-            hobbies.add("baking");
+          //  hobbies.add("baking");
             hobbies.add("surfing");
             hobbies.add("drawing");
             hobbies.add("journaling");
@@ -46,7 +46,7 @@ public class ActionItem2_Web {
                 String result = driver.findElement(By.xpath("//*[@class='sb_count']")).getText();
                 //split message to extract out the search number
                 String[] splitResult = result.split(" ");
-                System.out.println("The search number for " + hobbies.get(i)  + " is " + splitResult[0]);
+                System.out.println("The search number for " + hobbies.get(i)  + " is " + splitResult[1]);
 
             }//end of for loop
 

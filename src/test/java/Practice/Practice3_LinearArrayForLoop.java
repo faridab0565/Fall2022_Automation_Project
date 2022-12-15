@@ -25,7 +25,6 @@ public class Practice3_LinearArrayForLoop {
 
         for (int i = 0; i < countryCode.size(); i++ ) {
             //System.out.println("My country name is " + country.get(i) + " and the country code is " + countryCode.get(i));
-            System.out.println(country.get(3));
 
 
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class ActionItem6_BankOfAmerica1 extends Reusable_Annotations {
+public class ActionItem6_BankOfAmerica extends Reusable_Annotations {
 
     @Test
     public void tc001_navigateToAutoLoanCalculator() throws InterruptedException {
@@ -23,11 +23,12 @@ public class ActionItem6_BankOfAmerica1 extends Reusable_Annotations {
 
     @Test(dependsOnMethods = "tc001_navigateToAutoLoanCalculator")
     public void tc002_enterTheValuesOnCalculator() throws InterruptedException {
-        //use the select command for month dropdown
+        //use the select command for state dropdown
         WebElement USStates = driver.findElement(By.xpath("//*[@id='stateSelectModal']"));
         Select stateDropDown = new Select(USStates);
         //select new york state from the dropdown
         stateDropDown.selectByVisibleText("New York");
+        Thread.sleep(1000);
         //click on the go button to submit
         Reusable_Actions_Loggers.clickAction(driver, "//*[@id='stateSelectorSubmit']", logger, "click on go button");
 //wait 1 second
@@ -63,18 +64,19 @@ public class ActionItem6_BankOfAmerica1 extends Reusable_Annotations {
         System.out.println("Monthly cost is " + result);
         //click on apply now to start the application
         Reusable_Actions_Loggers.clickAction(driver, "//*[@id='apply_now']", logger, "click on apply now");
+        Thread.sleep(2000);
         //click on the dropdown to select the right option
         Reusable_Actions_Loggers.clickAction(driver, "//*[@id='autoLoanTypeSelect']", logger, "click to choose the type of loan");
         //choose dealer purchase
         Reusable_Actions_Loggers.clickAction(driver, "//*[@value='DealerPurchase']", logger, "click on dealer purchase");
         Thread.sleep(1000);
-        //click on the option: i don't have car information
+        //click on the option: I don't have car information
         Reusable_Actions_Loggers.clickAction(driver, "//*[@id='vehicle-loan-idonthavecarinformation']", logger, "click on i don't have car information");
         Thread.sleep(1000);
         //scroll to continue
         Reusable_Actions_Loggers.scrollByView(driver, "//*[@id='continueButtonLarge']", 0, "scroll");
         //wait 2 seconds
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         //click on the continue button
         Reusable_Actions_Loggers.clickAction(driver, "//*[@id='continueButtonLarge']", logger, "click on to continue");
         //scroll to continue

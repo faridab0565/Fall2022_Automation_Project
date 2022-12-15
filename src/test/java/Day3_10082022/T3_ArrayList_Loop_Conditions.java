@@ -17,11 +17,11 @@ public class T3_ArrayList_Loop_Conditions {
             //two equal will compare the values from right and left side
             //whereas one equal use to set a value for a variable
 
-            if (countries.get(i) == "USA") {
+        /*    if (countries.get(i) == "USA") {
                 System.out.println("Country is Australia. And index i is " + i);
             } else if (countries.get(i) == "Australia") {
                 System.out.println("Country is Australia. And index is i is" + i);
-            }
+            }*/
             //to comment/uncomment a block of code: control + shift / for windows
             //using OR || operator you can write both/multiple conditions on one if statement
             if (countries.get(i) == "USA" || countries.get(i) == "Australia") {
